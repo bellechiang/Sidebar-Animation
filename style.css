@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;500;700&display=swap');
+*, *::before, ::after{
+	box-sizing: border-box;
+}
+
+:root{
+	--header-height:3rem;
+	--left-navbar-width:68px;
+}
+
+body{
+	font-family: 'Noto Sans SC', sans-serif;
+	margin-top: calc(var(--header-height) + 1rem);
+	padding-left: 1rem;
+
+	transition: 0.5s;
+}
+
+a{
+	text-decoration: none;
+
+}
+
+span{
+	margin-left:  .7rem;
+}
+
+
+.header{
+	background-color: #FCF2F5;
+	padding:0 1rem;
+	width:100%;
+	height: var(--header-height);
+	
+	position:fixed;
+	top:0;
+	left:0;
+
+	display:flex;
+	align-items: center;
+	transition: .5s;
+	
+
+}
+
+.header-img{
+	border-radius: 50%;
+	width:35px;
+	height:35px;
+	overflow: hidden;
+	margin-left: auto;
+
+	display: flex;
+	justify-content: center;
+	transition: .5s;
+}
+
+.header-img img{
+	width:35px;
+}
+
+.left-navbar{
+	position:fixed;
+	top:0;
+	left:-30%;
+	width: var(--left-navbar-width);
+	height:100vh;
+	background-color: #FF4685;
+	transition: .5s;
+	padding: .5rem 1rem 0 0;
+
+}
+
+.left-navbar:hover{
+	width:13rem;
+}
+
+.nav{
+	height:100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+
+}
+
+
+.nav-logo, .nav-link{
+	display: grid;
+	grid-template-columns: max-content max-content;
+	align-items: center;
+	columns-gap:1rem;
+	padding:0.5rem 0 0.5rem 1.5rem;
+	
+
+}
+
+.nav-logo{
+	margin-bottom: 2rem;
+}
+
+.nav-logo-icon{
+	font-size:1.25rem;
+	color:#F7F6FB;
+}
+
+.nav-logo-name{
+	font-weight: 100;
+	color:#F7F6FB;
+}
+
+.nav-link{
+	color:#F993AD;
+	margin-bottom: 1.5rem;
+	font-weight: 100;
+}
+
+.nav-link:hover{
+	color:#F7F6FB;
+}
+
+
+.active{
+	color:#F7F6FB;
+	font-weight: 500;
+}
+
+.active::before{
+	content:"";
+	width:2px;
+	height:32px;
+	background-color:#F7F6FB ;
+	position:absolute;
+	left:0;
+}
+
+.nav-icon{
+	font-size:1.25rem;
+}
+
+h1{
+	font-weight:100;
+	color:#FF4685;
+}
+
+@media screen and (min-width: 768px){
+	body{
+		margin-top:calc(var(--header-height) + 2rem);
+		padding-left: calc(var(--left-navbar-width) + 2rem)
+	}
+	.header{
+		height:calc(var(--header-height) + 1rem);
+	}
+
+	.header-img{
+	width:40px;
+	height:40px;
+}
+
+	.header-img img{
+	width:45px;
+}
+	.left-navbar{
+		left:0;
+	}
+}
+
+
+
